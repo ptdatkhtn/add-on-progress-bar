@@ -4,6 +4,9 @@ import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.dependency.NpmPackage;
+import com.vaadin.flow.component.html.Div;
+import com.vaadin.flow.component.html.NativeButton;
+import com.vaadin.flow.component.listbox.ListBox;
 
 @Tag("paper-slider")
 @JsModule("@polymer/paper-slider/paper-slider.js")
@@ -16,6 +19,12 @@ import com.vaadin.flow.component.dependency.NpmPackage;
 public class PaperSlider extends Component {
 
     public PaperSlider() {
+
+        ListBox<String> listBox = new ListBox<>();
+        listBox.setItems("Bread", "Butter", "Milk");
+
+        NativeButton button = new NativeButton("Select Milk",
+                event -> listBox.setValue("Milk"));
     }
 
 }
