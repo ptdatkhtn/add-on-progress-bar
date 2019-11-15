@@ -12,7 +12,7 @@ public class View extends Div {
 //        PaperSlider paperSlider = new PaperSlider();
 //        add(paperSlider);
 
-        ProgressBar progressBar = new ProgressBar(200, 1000,5, 15, 180);
+        ProgressBar progressBar = new ProgressBar(1000,5, 15, 180);
         add(progressBar);
 
     }
